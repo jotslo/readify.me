@@ -13,7 +13,7 @@ var files = {
 };
 
 // get redirect url from page and set new window location
-var url = window.location.href.split("/").slice(3);
+var url = window.location.href.split("/").slice(3).join("/");
 
 // // if dark mode requested
 // if (url[0] == "d") {
