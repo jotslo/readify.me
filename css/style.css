@@ -1,0 +1,50 @@
+body {
+    background-color: #fffffc;
+    color: #111111;
+    font-family: 'Verdana';
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #0000ad;
+}
+
+hr {
+    border: 1px solid #dedede;
+}
+
+pages {
+    float: right;
+}
+
+url {
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 18.5px;
+    color: #0000ad;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#content {
+    width: 50%;
+    margin-left: 25%;
+}
+
+@media screen and (max-width: 1060px) {
+    #content {
+        width: calc(100% - 10px);
+        margin-left: 10px;
+    }  
+}
