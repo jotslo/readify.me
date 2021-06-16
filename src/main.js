@@ -164,9 +164,9 @@ function loadWebpage() {
             document.title = "readify.me - " + title;
         }
         
-        // if website has no content, redirect to get-started page
+        // if website has no content, redirect to error page
         else {
-            window.location.replace("https://readify.me/");
+            window.location.replace("https://readify.me/error");
         }
     })
 }
