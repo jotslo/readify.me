@@ -6,8 +6,3 @@ Using readify.me is incredibly simple! Just go to view any article on a modern w
 
 # Problem?
 Is a page not loading correctly? Is a page missing important content that should be there? Report a problem via the [**Issues**](https://github.com/jotslo/readify.me/issues) tab on our GitHub repository.
-
-# To-do
-- Replace local links (i.e. /src rather than readify.me/src) to its proper domain
-- Add support for images and other page elements
-- Add an easy way to modify how content is displayed for certain websites, which can be crowd-sourced
