@@ -14,6 +14,10 @@ var files = {
 
 // get redirect url from page and set new window location
 var url = window.location.href.split("/").slice(3).join("/");
+var protocol = url.split("://")[0];
+var domain = protocol + "://"
+    + url.split("//")[1]
+    .split("/")[0];
 
 // // if dark mode requested
 // if (url[0] == "d") {
@@ -22,10 +26,6 @@ var url = window.location.href.split("/").slice(3).join("/");
 
 // // used to test on local machine
 // var url = "https://news.sky.com/story/joe-biden-vladimir-putin-summit-talks-between-us-and-russian-presidents-have-concluded-12334154";
-// var protocol = url.split("://")[0];
-// var domain = protocol + "://"
-//     + url.split("//")[1]
-//     .split("/")[0];
 
 var title = "Article";
 var siteName = "Unknown";
