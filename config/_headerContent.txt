@@ -1,0 +1,10 @@
+<div id='content'>
+<article>
+<br>
+<b>readify.me</b>
+<pages>
+<a href='{0}'>Home</a>
+|
+<a href='{2}'>View original page</a>
+</pages>
+<hr>

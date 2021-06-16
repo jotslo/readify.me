@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /get-started
+Allow: /$
 Disallow: /
