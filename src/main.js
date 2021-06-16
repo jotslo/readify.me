@@ -4,8 +4,8 @@ const proxy = "https://api.allorigins.win/get?url=";
 // config file variables
 var filesCounted = 0;
 var files = {
-    "footerContent": "_footerContent.txt",
-    "headerContent": "_headerContent.txt",
+    "footerContent": "footerContent.txt",
+    "headerContent": "headerContent.txt",
     "blacklistedContent": "blacklistedContent.json",
     "endOfContent": "endOfContent.json",
     "whitelistedClasses": "whitelistedClasses.json",
