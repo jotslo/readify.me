@@ -1,3 +1,5 @@
+![readify.me](assets/logo.png)
+
 # Introduction
 **Trying to read an article with annoying ads or interruptions?** readify.me provides a safe, easy, open-source solution that allows you to read articles in peace - all without the need to download any software, create an account or even store any cookies!
 

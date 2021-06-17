@@ -1,0 +1,24 @@
+{
+    "name": "readify.me",
+    "description": "A safe, easy, open-source solution that allows you to read articles in peace.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["activeTab"],
+    "background": {
+        "service_worker": "/background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "/images/book16.png",
+            "32": "/images/book32.png",
+            "48": "/images/book48.png",
+            "128": "/images/book128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/book16.png",
+        "32": "/images/book32.png",
+        "48": "/images/book48.png",
+        "128": "/images/book128.png"
+    }
+}
