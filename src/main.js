@@ -14,10 +14,18 @@ var files = {
 
 // get redirect url from page and set new window location
 var url = window.location.href.split("/").slice(3).join("/");
-var protocol = url.split("://")[0];
-var domain = protocol + "://"
-    + url.split("//")[1]
-    .split("/")[0];
+var protocol;
+var domain;
+
+try {
+    protocol = url.split("://")[0];
+    domain = protocol + "://"
+        + url.split("//")[1]
+        .split("/")[0];
+}
+catch {
+    console.log("Invalid URL")
+}
 
 // // if dark mode requested
 // if (url[0] == "d") {
@@ -171,17 +179,24 @@ function loadWebpage() {
     })
 }
 
-// get file contents and update variables
-filesLength = Object.keys(files).length;
+// if url is valid, get file contents and update variables
+if (protocol) {
+    filesLength = Object.keys(files).length;
 
-for (let [key, value] of Object.entries(files)) {
-    $.get("/config/" + files[key], function(data) {
-        filesCounted++;
-        files[key] = data;
+    for (let [key, value] of Object.entries(files)) {
+        $.get("/config/" + files[key], function(data) {
+            filesCounted++;
+            files[key] = data;
 
-        // if all files loaded, load webpage
-        if (filesCounted == filesLength) {
-            loadWebpage();
-        }
-    })
+            // if all files loaded, load webpage
+            if (filesCounted == filesLength) {
+                loadWebpage();
+            }
+        })
+    }
+}
+
+// otherwise, redirect to error page
+else {
+    window.location.replace("https://readify.me/error");
 }
