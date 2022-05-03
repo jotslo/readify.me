@@ -17,6 +17,10 @@ var url = window.location.href.split("/").slice(3).join("/");
 var protocol;
 var domain;
 
+if (url.indexOf("://") == -1) {
+    url = "http://" + url;
+}
+
 try {
     protocol = url.split("://")[0];
     domain = protocol + "://"
@@ -24,7 +28,7 @@ try {
         .split("/")[0];
 }
 catch {
-    console.log("Invalid URL")
+    console.log("Invalid URL");
 }
 
 // // if dark mode requested
