@@ -1,7 +1,8 @@
 from threading import Thread
 from flask import Flask, request
-
+from waitress import serve
 from urllib.request import urlopen
+
 
 # create flask app
 app = Flask(__name__)
@@ -36,6 +37,6 @@ def not_found(e):
     return {"success": False, "error": "Invalid endpoint"}, 404
 
 
-# start the flask server
+# start the flask server in production
 if __name__ == "__main__":
-    app.run()
+    serve(app, host="0.0.0.0", port=443)
