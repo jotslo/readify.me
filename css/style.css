@@ -1,43 +1,40 @@
 body {
-    background-color: #fffffc;
-    color: #111111;
-    font-family: 'Verdana';
+    background-color: #131313;
+    color: #d4d4d4;
+    font-family: 'Roboto Slab', serif;
     line-height: 1.5;
 }
 
 h1 {
-    font-weight: normal;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 24;
+    margin-top: 24;
 }
 
 h2 {
-    font-weight: normal;
-    font-size: 27px;
+    font-weight: bold;
+    font-size: 20;
 }
 
 h3 {
-    font-weight: normal;
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 16;
 }
 
 h4 {
-    font-weight: normal;
-    font-size: 21px;
+    font-weight: bold;
+    font-size: 12;
 }
 
 h5 {
-    font-weight: normal;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 11;
 }
 
-h6 {
-    font-weight: normal;
-    font-size: 15px;
-}
-
-a {
-    text-decoration: none;
-    color: #0000ad;
+p {
+    font-size: 16;
+    margin-top: -16;
+    margin-bottom: 0;
 }
 
 hr {
@@ -48,23 +45,29 @@ pages {
     float: right;
 }
 
-url {
-    font-family: 'Courier New';
-    font-weight: bold;
-    font-size: 18.5px;
-    color: #0000ad;
+a {
+    color: #c0c0c0;
+    text-decoration: none;
 }
 
-/*
-p {
-    text-align: justify;
+a:hover {
+    color: #9a9a9a;
 }
-*/
+
+#stats {
+    color: #c0c0c0;
+    font-size: 12;
+}
+
+#desc {
+    margin-top: -15;
+    margin-bottom: 3;
+    color: #ffffff;
+}
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 12;
+    margin-bottom: 0;
 }
 
 #exampleimg {
@@ -80,14 +83,47 @@ img {
 }
 
 #content {
-    width: 45%;
-    margin-left: 27.5%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#contentheader {
+    margin-top: 32;
+    margin-bottom: -7;
+    font-weight: bold;
+}
+
+#end {
+    margin-bottom: 72;
 }
 
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 700px) {
     #content {
-        width: calc(100% - 10px);
-        margin-left: 10px;
+        width: calc(90%);
+        margin-left: 5%;
     }  
+}
+
+@media screen and (min-width: 701px) {
+    #content {
+        width: 600px;
+        margin-left: calc((100% - 600px) / 2);
+    }
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container img {
+  width: 120;
+  margin-right: 10px;
+}
+
+.container .headings {
+  flex: 1;
 }
