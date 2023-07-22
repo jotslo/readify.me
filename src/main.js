@@ -18,9 +18,9 @@ var protocol;
 var domain;
 
 // if testing on local machine, redirect to test page
-if (url == "404.html") {
+/*if (url == "404.html") {
     url = "https://www.bbc.co.uk/news/newsbeat-65791039";
-}
+}*/
 
 if (url.indexOf("://") == -1) {
     url = "http://" + url;
