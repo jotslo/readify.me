@@ -33,7 +33,6 @@ h5 {
 
 p {
     font-size: 16;
-    margin-top: -16;
     margin-bottom: 0;
 }
 
@@ -66,7 +65,6 @@ a:hover {
 }
 
 img {
-    margin-top: 12;
     margin-bottom: 0;
 }
 

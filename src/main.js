@@ -17,6 +17,11 @@ var url = window.location.href.split("/").slice(3).join("/");
 var protocol;
 var domain;
 
+// if testing on local machine, redirect to test page
+if (url == "404.html") {
+    url = "https://www.bbc.co.uk/news/newsbeat-65791039";
+}
+
 if (url.indexOf("://") == -1) {
     url = "http://" + url;
 }
@@ -121,6 +126,11 @@ function removeUselessInfo(pageHTML) {
             lastImages.push(this);
         }
 
+        // if element is header, store as title
+        else if (this.tagName == "H1") {
+            title = $(element).text();
+        }
+
         // if too many images in a row, remove all images and then reset array
         else {
             if (lastImages.length >= 5) {
@@ -173,7 +183,7 @@ function loadWebpage() {
 
             // update body and title
             document.body.innerHTML = pageHTML;
-            document.title = "readify.me - " + title;
+            document.title = title;
         }
         
         // if website has no content, redirect to error page

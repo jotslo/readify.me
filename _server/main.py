@@ -1,7 +1,7 @@
 from threading import Thread
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from waitress import serve
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 
 
 # create flask app
@@ -10,7 +10,7 @@ app = Flask(__name__)
 # return basic OK response at root
 @app.route("/")
 def home():
-    return {"success": True, "message": "jotslo-api is running!"}
+    return {"success": True, "message": "Ready!"}
 
 
 @app.route("/proxy", methods=["GET"])
@@ -22,10 +22,9 @@ def proxy():
     
     try:
         with urlopen(url) as response:
-            content = response.read().decode("utf-8")
+            content = jsonify({"contents": response.read().decode("utf-8")})
+            content.headers.add('Access-Control-Allow-Origin', '*')
             return content
-
-        return response.read()
     
     except:
         return {"success": False, "error": "Invalid URL"}, 400
